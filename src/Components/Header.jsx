@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png';
+import logo from '../assets/autism-awareness.png';
 
 export const Header = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -57,13 +57,13 @@ export const Header = () => {
 
   return (
     <header className='navbar bg-white shadow-md fixed top-0 left-0 w-full z-50'>
-      <div className='container mx-auto flex items-center justify-between py-4 px-16'>
+      <div className='container mx-auto flex items-center justify-between py-4 px-16 h-32'>
         {/* Logo */}
         <Link to='/' aria-label='Home'>
           <img
             src={logo}
             alt='Autism Awareness Africa logo'
-            className='w-20 h-20 object-contain'
+            className='w-32 h-32 object-contain'
           />
         </Link>
 
