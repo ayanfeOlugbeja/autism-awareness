@@ -56,7 +56,7 @@ export const Header = () => {
   };
 
   return (
-    <header className='navbar bg-white shadow-md fixed top-0 left-0 w-full z-50'>
+    <header className='navbar bg-white shadow-md  top-0 left-0 w-full z-50'>
       <div className='container mx-auto flex items-center justify-between py-4 px-16 h-32'>
         {/* Logo */}
         <Link to='/' aria-label='Home'>
