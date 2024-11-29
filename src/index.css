@@ -1,7 +1,113 @@
+/* Resetting default styles for consistency across browsers */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Normalize CSS for modern browsers */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Base styles */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -18,13 +124,19 @@
 }
 
 * {
-  /* border: 1px solid green; */
   box-sizing: border-box;
 }
 
+/* Ensure smooth scrolling is consistent */
 html {
   scroll-behavior: smooth;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbar styles */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -33,13 +145,13 @@ html {
 }
 ::-webkit-scrollbar-thumb {
   background-color: #2067d1;
-  scroll-snap-type: y mandatory;
-  scroll-snap-stop: always;
+  border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #2c81ea;
 }
 
+/* Anchor links */
 a {
   font-weight: 500;
   color: #646cff;
@@ -49,14 +161,13 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-}
-
+/* Headings */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
+/* Buttons */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -66,7 +177,7 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background-color 0.25s;
 }
 button:hover {
   border-color: #646cff;
@@ -76,6 +187,24 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Input styles for cross-browser consistency */
+input,
+textarea {
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0.6em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+input:focus,
+textarea:focus {
+  border-color: #646cff;
+  outline: none;
+  box-shadow: 0 0 4px #646cff;
+}
+
+/* Light mode adjustments */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
