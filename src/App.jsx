@@ -1,30 +1,73 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import React from 'react';
-import { lazy, Suspense } from 'react';
-import './index.css';
+import { Suspense, lazy } from 'react'
+import PropTypes from 'prop-types'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { HelmetProvider } from 'react-helmet-async'
+import { auth } from './config/firebase'
+import './index.css'
 // import 'react-toastify/dist/ReactToastify.css';
 // import FrequentlyAQ from './Pages/FAQS/FrequentlyAQ';
-import Header from './Components/Header';
-// import Footer from './Pages/Home/Footer';
-// import Contact from './Pages/Contact/Contact';
-// import About from './Pages/About/About';
-// import Booking from './Pages/BookCourse/Booking';
-// import Loader from './Components/Loader';
-// import NotFound from './NotFound';
-// import LegalPage from './Pages/LegalPage';
-// import Services from './Pages/Services';
-// import { ToastContainer } from 'react-toastify';
-const Home = lazy(() => import('./Pages/Home'));
-// const Admin = lazy(() => import('./admin/Admin'));
-// const Login = lazy(() => import('./admin/Login'));
-// const Register = lazy(() => import('./admin/Register'));
+
+// Lazy load components
+const Header = lazy(() => import('./components/Header'))
+const Footer = lazy(() => import('./components/Footer'))
+
+// Lazy load pages
+const Home = lazy(() => import('./Pages/Home'))
+const About = lazy(() => import('./Pages/About'))
+const Resources = lazy(() => import('./Pages/Resources'))
+const GetInvolved = lazy(() => import('./Pages/GetInvolved'))
+const Contact = lazy(() => import('./Pages/Contact'))
+const Donate = lazy(() => import('./Pages/Donate'))
+const News = lazy(() => import('./Pages/News'))
+const Events = lazy(() => import('./Pages/Events'))
+const Privacy = lazy(() => import('./Pages/Legal/Privacy'))
+const Terms = lazy(() => import('./Pages/Legal/Terms'))
+const NotFound = lazy(() => import('./Pages/NotFound'))
+
+// Lazy load admin pages
+const AdminLayout = lazy(() => import('./Pages/Admin/Layout'))
+const AdminDashboard = lazy(() => import('./Pages/Admin'))
+const AdminPosts = lazy(() => import('./Pages/Admin/Posts'))
+const AdminEvents = lazy(() => import('./Pages/Admin/Events'))
+const AdminNewsletters = lazy(() => import('./Pages/Admin/Newsletters'))
+const AdminPartners = lazy(() => import('./Pages/Admin/Partners'))
+const AdminVolunteers = lazy(() => import('./Pages/Admin/Volunteers'))
+const AdminSettings = lazy(() => import('./Pages/Admin/Settings'))
+
+// Lazy load auth pages
+const Login = lazy(() => import('./Pages/Auth/Login'))
+
+// Protected Route component
+const ProtectedRoute = ({ children }) => {
+  const [user, loading] = useAuthState(auth)
+
+  if (loading) {
+    return <div>Loading...</div>
+  }
+
+  if (!user) {
+    return <Navigate to='/login' />
+  }
+
+  return children
+}
+
+ProtectedRoute.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 function App() {
   return (
-    // <Suspense fallback={<Loader />}>
-    <BrowserRouter>
-      <div className='App'>
-        {/* <ToastContainer
+    <HelmetProvider>
+      <Router>
+        <div className='flex flex-col min-h-screen'>
+          {/* <ToastContainer
             position='top-right'
             autoClose={1000}
             hideProgressBar={false}
@@ -35,29 +78,127 @@ function App() {
             pauseOnHover
             theme='light'
           /> */}
-        <Header />
-        <main>
-          <Routes>
-            <Route index element={<Home />} />
+          <Suspense fallback={<div className='h-16 bg-white shadow-sm' />}>
+            <Header />
+          </Suspense>
 
-            {/* <Route path='/faqs' element={<FrequentlyAQ />} />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/bookcourse' element={<Booking />} />
-              <Route path='/admin' element={<Admin />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/register' element={<Register />} />
-              <Route path='*' element={<NotFound />} />
-              <Route path='/services' element={<Services />} />
-              <Route path='/terms' element={<LegalPage type='terms' />} />
-              <Route path='/privacy' element={<LegalPage type='privacy' />} />  */}
-          </Routes>
-        </main>
-        {/* <Footer /> */}
-      </div>
-    </BrowserRouter>
-    // </Suspense>
-  );
+          <main className='flex-grow'>
+            <Suspense
+              fallback={
+                <div className='flex items-center justify-center min-h-screen'>
+                  Loading...
+                </div>
+              }
+            >
+              <Routes>
+                {/* Public Routes */}
+                <Route path='/' element={<Home />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/resources' element={<Resources />} />
+                <Route path='/get-involved' element={<GetInvolved />} />
+                <Route path='/contact' element={<Contact />} />
+                <Route path='/donate' element={<Donate />} />
+                <Route path='/news' element={<News />} />
+                <Route path='/events' element={<Events />} />
+                <Route path='/privacy' element={<Privacy />} />
+                <Route path='/terms' element={<Terms />} />
+
+                {/* Auth Routes */}
+                <Route path='/login' element={<Login />} />
+
+                {/* Admin Routes */}
+                <Route
+                  path='/admin'
+                  element={
+                    <ProtectedRoute>
+                      <AdminLayout>
+                        <AdminDashboard />
+                      </AdminLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path='/admin/posts/*'
+                  element={
+                    <ProtectedRoute>
+                      <AdminLayout>
+                        <AdminPosts />
+                      </AdminLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path='/admin/events/*'
+                  element={
+                    <ProtectedRoute>
+                      <AdminLayout>
+                        <AdminEvents />
+                      </AdminLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path='/admin/newsletters/*'
+                  element={
+                    <ProtectedRoute>
+                      <AdminLayout>
+                        <AdminNewsletters />
+                      </AdminLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path='/admin/partners/*'
+                  element={
+                    <ProtectedRoute>
+                      <AdminLayout>
+                        <AdminPartners />
+                      </AdminLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path='/admin/volunteers/*'
+                  element={
+                    <ProtectedRoute>
+                      <AdminLayout>
+                        <AdminVolunteers />
+                      </AdminLayout>
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path='/admin/settings/*'
+                  element={
+                    <ProtectedRoute>
+                      <AdminLayout>
+                        <AdminSettings />
+                      </AdminLayout>
+                    </ProtectedRoute>
+                  }
+                />
+
+                {/* 404 Route */}
+                <Route path='*' element={<NotFound />} />
+
+                {/* <Route path='/faqs' element={<FrequentlyAQ />} />
+                <Route path='/admin' element={<Admin />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/register' element={<Register />} />
+                <Route path='/services' element={<Services />} />
+                <Route path='/terms' element={<LegalPage type='terms' />} />
+                <Route path='/privacy' element={<LegalPage type='privacy' />} />  */}
+              </Routes>
+            </Suspense>
+          </main>
+
+          <Suspense fallback={<div className='h-64 bg-gray-100' />}>
+            <Footer />
+          </Suspense>
+        </div>
+      </Router>
+    </HelmetProvider>
+  )
 }
 
-export default App;
+export default App
