@@ -1,4 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom'
+import {  BodyText,DisplayText,
+  } from '../../Components/typography'
 import WhatIsAutism from './WhatIsAutism'
 import SupportServices from './SupportServices'
 import Research from './Research'
@@ -84,13 +86,13 @@ const Resources = () => {
       <section className='relative py-20 bg-gradient-to-r from-blue-50 to-indigo-50'>
         <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='max-w-3xl mx-auto text-center'>
-            <h1 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
+            <DisplayText>
               Resources
-            </h1>
-            <p className='text-xl text-gray-600'>
+            </DisplayText>
+            <Body Text className='max-w-2xl mx-auto'>
               Access educational materials, support services, and research
               findings to better understand and support individuals with autism.
-            </p>
+            </BodyText>
           </div>
         </div>
       </section>
