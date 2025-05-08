@@ -19,4 +19,14 @@ export default defineConfig({
       '@': resolve(__dirname, './src'),
     },
   },
+  server: {
+    historyApiFallback: true, // Ensures index.html is served for all routes
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined, // Optional: Optimize chunking
+      },
+    },
+  },
 })
