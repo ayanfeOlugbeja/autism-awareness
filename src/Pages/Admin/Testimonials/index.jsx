@@ -8,9 +8,9 @@ import {
   query,
   orderBy,
 } from 'firebase/firestore'
-import AdminCard from '../../../components/admin/AdminCard'
-import AdminButton from '../../../components/admin/AdminButton'
-import AdminModal from '../../../components/admin/AdminModal'
+import AdminCard from '../../../Components/admin/AdminCard'
+import AdminButton from '../../../Components/admin/AdminButton'
+import AdminModal from '../../../Components/admin/AdminModal'
 import TestimonialForm from './TestimonialForm'
 
 const AdminTestimonials = () => {
@@ -136,7 +136,7 @@ const AdminTestimonials = () => {
                 />
               )}
               <p className='text-gray-600 italic text-center'>
-                "{testimonial.content}"
+                &quot;{testimonial.content}&quot;
               </p>
               <div className='flex items-center justify-center space-x-2'>
                 {testimonial.rating && (

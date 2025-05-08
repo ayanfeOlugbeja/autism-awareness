@@ -1,8 +1,7 @@
-import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Container, Grid, Card, Section } from '../../components/layout'
-import { Heading, BodyText, SmallText } from '../../components/typography'
-import { Button } from '../../components/interactive'
+import { Container, Grid, Card, Section } from '../../Components/layout'
+import { Heading, BodyText, SmallText } from '../../Components/typography'
+import { Button } from '../../Components/interactive'
 
 const Careers = () => {
   const openPositions = [

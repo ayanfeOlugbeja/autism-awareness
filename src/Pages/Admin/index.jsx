@@ -1,7 +1,6 @@
-import React from 'react'
-import { Grid, Card } from '../../components/layout'
-import { Heading, BodyText } from '../../components/typography'
-import { Button } from '../../components/interactive'
+import { Grid, Card } from '../../Components/layout'
+import { Heading, BodyText } from '../../Components/typography'
+import { Button } from '../../Components/interactive'
 
 const AdminDashboard = () => {
   const stats = [
@@ -45,8 +44,8 @@ const AdminDashboard = () => {
       <div>
         <Heading className='text-3xl mb-2'>Dashboard</Heading>
         <BodyText className='text-gray-600'>
-          Welcome to your admin dashboard. Here's an overview of your website's
-          performance.
+          Welcome to your admin dashboard. Here&apos;s an overview of your
+          website&apos;s performance.
         </BodyText>
       </div>
 
@@ -101,7 +100,7 @@ const AdminDashboard = () => {
                     New blog post published
                   </BodyText>
                   <BodyText className='text-gray-600 text-sm'>
-                    "Understanding Autism in Children" was published
+                    &quot;Understanding Autism in Children&quot; was published
                   </BodyText>
                 </div>
               </div>
@@ -113,7 +112,7 @@ const AdminDashboard = () => {
                 <div>
                   <BodyText className='font-medium'>New event created</BodyText>
                   <BodyText className='text-gray-600 text-sm'>
-                    "Parent Support Workshop" was scheduled
+                    &quot;Parent Support Workshop&quot; was scheduled
                   </BodyText>
                 </div>
               </div>

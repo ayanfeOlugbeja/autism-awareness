@@ -1,12 +1,11 @@
-import React from 'react'
 import {
   DisplayText,
   Heading,
   BodyText,
   SmallText,
-} from '../../../components/typography'
-import { Container, Grid, Card, Section } from '../../../components/layout'
-import { Button, NavigationCard } from '../../../components/interactive'
+} from '../../../Components/typography'
+import { Container, Grid, Card, Section } from '../../../Components/layout'
+import { Button, NavigationCard } from '../../../Components/interactive'
 
 const Research = () => {
   const researchAreas = [

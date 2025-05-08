@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Container, Card } from '../../components/layout'
-import { Heading, BodyText } from '../../components/typography'
-import { Button } from '../../components/interactive'
+import { Container, Card } from '../../Components/layout'
+import { Heading, BodyText } from '../../Components/typography'
+import { Button } from '../../Components/interactive'
 import { auth } from '../../config/firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 

@@ -12,8 +12,8 @@ import { auth } from './config/firebase'
 import './index.css'
 
 // Lazy load components
-const Header = lazy(() => import('./Components/Header/index.jsx'))
-const Footer = lazy(() => import('./Components/Footer/index.jsx'))
+import Header from './Components/Header'
+import Footer from './Components/Footer'
 
 // Lazy load pages
 const Home = lazy(() => import('./Pages/Home'))
@@ -33,7 +33,9 @@ const AdminLayout = lazy(() => import('./Pages/Admin/Layout'))
 const AdminDashboard = lazy(() => import('./Pages/Admin'))
 const AdminPosts = lazy(() => import('./Pages/Admin/Posts'))
 const AdminEvents = lazy(() => import('./Pages/Admin/Events'))
-const AdminNewsletters = lazy(() => import('./Pages/Admin/Newsletters'))
+const AdminNewsletters = lazy(() =>
+  import('./Pages/Admin/Newsletters/index.jsx')
+)
 const AdminPartners = lazy(() => import('./Pages/Admin/Partners'))
 const AdminVolunteers = lazy(() => import('./Pages/Admin/Volunteers'))
 const AdminSettings = lazy(() => import('./Pages/Admin/Settings'))

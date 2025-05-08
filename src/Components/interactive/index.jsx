@@ -1,5 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 export const Button = ({
   children,
@@ -23,6 +23,12 @@ export const Button = ({
       {children}
     </button>
   )
+}
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  variant: PropTypes.oneOf(['primary', 'secondary', 'outline']),
 }
 
 export const LinkButton = ({
@@ -51,6 +57,13 @@ export const LinkButton = ({
   )
 }
 
+LinkButton.propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  variant: PropTypes.oneOf(['primary', 'secondary', 'outline']),
+}
+
 export const NavigationCard = ({ to, icon, title, description }) => (
   <Link
     to={to}
@@ -66,6 +79,13 @@ export const NavigationCard = ({ to, icon, title, description }) => (
   </Link>
 )
 
+NavigationCard.propTypes = {
+  to: PropTypes.string.isRequired,
+  icon: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+}
+
 export const QuickLink = ({ to, label }) => (
   <Link
     to={to}
@@ -74,6 +94,11 @@ export const QuickLink = ({ to, label }) => (
     {label}
   </Link>
 )
+
+QuickLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+}
 
 export const Input = ({ label, error, className = '', ...props }) => (
   <div className='mb-4'>
@@ -90,6 +115,12 @@ export const Input = ({ label, error, className = '', ...props }) => (
   </div>
 )
 
+Input.propTypes = {
+  label: PropTypes.string,
+  error: PropTypes.string,
+  className: PropTypes.string,
+}
+
 export const TextArea = ({ label, error, className = '', ...props }) => (
   <div className='mb-4'>
     {label && (
@@ -104,3 +135,9 @@ export const TextArea = ({ label, error, className = '', ...props }) => (
     {error && <p className='mt-1 text-sm text-red-600'>{error}</p>}
   </div>
 )
+
+TextArea.propTypes = {
+  label: PropTypes.string,
+  error: PropTypes.string,
+  className: PropTypes.string,
+}

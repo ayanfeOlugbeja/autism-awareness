@@ -1,6 +1,5 @@
-import React from 'react'
-import { Container, Section } from '../../components/layout'
-import { Heading, BodyText } from '../../components/typography'
+import { Container, Section } from '../../Components/layout'
+import { Heading, BodyText } from '../../Components/typography'
 
 const Terms = () => {
   return (
@@ -52,8 +51,8 @@ const Terms = () => {
                     materials
                   </li>
                   <li>
-                    Transfer the materials to another person or "mirror" the
-                    materials on any other server
+                    Transfer the materials to another person or
+                    &quot;mirror&quot; the materials on any other server
                   </li>
                 </ul>
               </section>
@@ -106,10 +105,10 @@ const Terms = () => {
               <section>
                 <Heading className='text-2xl mb-4'>Disclaimer</Heading>
                 <BodyText className='text-gray-600'>
-                  The materials on our website are provided on an 'as is' basis.
-                  We make no warranties, expressed or implied, and hereby
-                  disclaim and negate all other warranties including, without
-                  limitation, implied warranties or conditions of
+                  The materials on our website are provided on an &apos;as
+                  is&apos; basis. We make no warranties, expressed or implied,
+                  and hereby disclaim and negate all other warranties including,
+                  without limitation, implied warranties or conditions of
                   merchantability, fitness for a particular purpose, or
                   non-infringement of intellectual property or other violation
                   of rights.
@@ -146,7 +145,7 @@ const Terms = () => {
                   and are not responsible for the contents of any such linked
                   site. The inclusion of any link does not imply endorsement by
                   us of the site. Use of any such linked website is at the
-                  user's own risk.
+                  user&apos;s own risk.
                 </BodyText>
               </section>
 

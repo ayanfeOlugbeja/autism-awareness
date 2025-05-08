@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { Card } from '../../../components/layout'
-import { Heading, BodyText } from '../../../components/typography'
-import { Button } from '../../../components/interactive'
+import { Card } from '../../../Components/layout'
+import { Heading } from '../../../Components/typography'
+import { Button } from '../../../Components/interactive'
 import { db } from '../../../config/firebase'
 import { doc, getDoc, updateDoc } from 'firebase/firestore'
 

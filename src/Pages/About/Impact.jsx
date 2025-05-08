@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Impact = () => {
   const impactStats = [
     {
@@ -56,10 +54,10 @@ const Impact = () => {
       <h2 className='text-3xl font-bold text-gray-900 mb-8'>Our Impact</h2>
 
       <p className='text-gray-600 mb-12'>
-        Through our dedicated work and the support of our partners, we've made
-        significant progress in improving the lives of individuals with autism
-        and their families across Africa. Here's a look at our impact and
-        success stories.
+        Through our dedicated work and the support of our partners, we&apos;ve
+        made significant progress in improving the lives of individuals with
+        autism and their families across Africa. Here&apos;s a look at our
+        impact and success stories.
       </p>
 
       {/* Impact Statistics */}

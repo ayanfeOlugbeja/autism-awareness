@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import { Container } from '../../components/layout'
-import { Heading } from '../../components/typography'
+import { Container } from '../../Components/layout'
+import { Heading } from '../../Components/typography'
 
 const AdminLayout = ({ children }) => {
   const location = useLocation()

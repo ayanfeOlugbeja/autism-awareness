@@ -1,6 +1,5 @@
-import React from 'react'
-import { Container, Section } from '../../components/layout'
-import { Heading, BodyText } from '../../components/typography'
+import { Container, Section } from '../../Components/layout'
+import { Heading, BodyText } from '../../Components/typography'
 
 const Privacy = () => {
   return (
@@ -120,7 +119,7 @@ const Privacy = () => {
                 <BodyText className='text-gray-600'>
                   We may update this Privacy Policy from time to time. We will
                   notify you of any changes by posting the new Privacy Policy on
-                  this page and updating the "Last updated" date.
+                  this page and updating the &quot;Last updated&quot; date.
                 </BodyText>
               </section>
 

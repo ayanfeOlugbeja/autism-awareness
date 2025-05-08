@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom'
-import { Container } from '../../components/layout'
-import { Heading, BodyText } from '../../components/typography'
-import { Button } from '../../components/interactive'
-import { QuickLink } from '../../components/interactive'
+import { Container } from '../../Components/layout'
+import { Heading, BodyText } from '../../Components/typography'
+import { Button } from '../../Components/interactive'
+import { QuickLink } from '../../Components/interactive'
 
 const Home = () => {
   const navigate = useNavigate()

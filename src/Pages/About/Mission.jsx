@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Mission = () => {
   return (
     <div className='prose prose-lg max-w-none'>

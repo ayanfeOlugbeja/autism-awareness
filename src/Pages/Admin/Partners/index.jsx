@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { Card, Grid } from '../../../components/layout'
-import { Heading, BodyText } from '../../../components/typography'
-import { Button } from '../../../components/interactive'
+import { Card, Grid } from '../../../Components/layout'
+import { Heading, BodyText } from '../../../Components/typography'
+import { Button } from '../../../Components/interactive'
 import { db } from '../../../config/firebase'
 import {
   collection,

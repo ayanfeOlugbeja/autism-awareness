@@ -1,12 +1,6 @@
-import React from 'react'
-import {
-  DisplayText,
-  Heading,
-  BodyText,
-  SmallText,
-} from '../../../components/typography'
-import { Container, Grid, Card, Section } from '../../../components/layout'
-import { Button } from '../../../components/interactive'
+import { Heading, BodyText } from '../../../Components/typography'
+import { Container, Grid, Card, Section } from '../../../Components/layout'
+import { Button } from '../../../Components/interactive'
 
 const WhatIsAutism = () => {
   const keyFacts = [

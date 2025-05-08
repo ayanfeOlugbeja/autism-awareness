@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container } from '../layout'
 import { Heading, BodyText, SmallText } from '../typography'
@@ -90,7 +89,7 @@ const Footer = () => {
             <div>
               <Heading className='text-lg mb-4'>Contact</Heading>
               <BodyText className='text-gray-600 mb-4'>
-                Have questions? We're here to help.
+                Have questions? We&apos;re here to help.
               </BodyText>
               <Button variant='outline' className='w-full'>
                 Contact Us

@@ -1,20 +1,16 @@
 import { useState, useEffect } from 'react'
-import { Card, Grid } from '../../../components/layout'
-import { Heading, BodyText } from '../../../components/typography'
-import { Button } from '../../../components/interactive'
 import { db } from '../../../config/firebase'
 import {
   collection,
   getDocs,
   deleteDoc,
   doc,
-  updateDoc,
   query,
   orderBy,
 } from 'firebase/firestore'
-import AdminCard from '../../../components/admin/AdminCard'
-import AdminButton from '../../../components/admin/AdminButton'
-import AdminModal from '../../../components/admin/AdminModal'
+import AdminCard from '../../../Components/admin/AdminCard'
+import AdminButton from '../../../Components/admin/AdminButton'
+import AdminModal from '../../../Components/admin/AdminModal'
 import NewsletterForm from './NewsletterForm'
 
 const AdminNewsletters = () => {

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Team = () => {
   const teamMembers = [
     {
@@ -74,8 +72,8 @@ const Team = () => {
           Join Our Team
         </h3>
         <p className='text-gray-600 mb-6'>
-          We're always looking for passionate individuals who want to make a
-          difference. Check out our current openings and join our mission to
+          We&apos;re always looking for passionate individuals who want to make
+          a difference. Check out our current openings and join our mission to
           create a more inclusive Africa.
         </p>
         <a

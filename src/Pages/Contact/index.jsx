@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {
   DisplayText,
   Heading,
   BodyText,
   SmallText,
-} from '../../components/typography'
-import { Container, Grid, Card, Section } from '../../components/layout'
-import { Input, TextArea, Button } from '../../components/interactive'
+} from '../../Components/typography'
+import { Container, Grid, Card, Section } from '../../Components/layout'
+import { Input, TextArea, Button } from '../../Components/interactive'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -76,8 +76,8 @@ const Contact = () => {
           <div className='text-center mb-16'>
             <DisplayText className='mb-4'>Contact Us</DisplayText>
             <BodyText className='max-w-2xl mx-auto'>
-              We're here to help. Reach out to us with any questions, concerns,
-              or to learn more about our services.
+              We&apos;re here to help. Reach out to us with any questions,
+              concerns, or to learn more about our services.
             </BodyText>
           </div>
 

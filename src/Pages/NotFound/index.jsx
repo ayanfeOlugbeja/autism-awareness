@@ -1,8 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { DisplayText, Heading, BodyText } from '../../components/typography'
-import { Container, Grid, Card, Section } from '../../components/layout'
-import { NavigationCard, QuickLink, Button } from '../../components/interactive'
+import { DisplayText, Heading, BodyText } from '../../Components/typography'
+import { Container, Grid, Section } from '../../Components/layout'
+import { NavigationCard, QuickLink, Button } from '../../Components/interactive'
 
 const NotFound = () => {
   const navigationCards = [

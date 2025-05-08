@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { db } from '../../../config/firebase'
 import { doc, getDoc } from 'firebase/firestore'
-import AdminCard from '../../../components/admin/AdminCard'
-import AdminButton from '../../../components/admin/AdminButton'
+import AdminCard from '../../../Components/admin/AdminCard'
+import AdminButton from '../../../Components/admin/AdminButton'
 import PostForm from './PostForm'
 
 const EditPost = () => {

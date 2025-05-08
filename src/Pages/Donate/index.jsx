@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {
   DisplayText,
   Heading,
   BodyText,
   SmallText,
-} from '../../components/typography'
-import { Container, Grid, Card, Section } from '../../components/layout'
-import { Button, Input } from '../../components/interactive'
+} from '../../Components/typography'
+import { Container, Grid, Card, Section } from '../../Components/layout'
+import { Button, Input } from '../../Components/interactive'
 
 const Donate = () => {
   const [selectedAmount, setSelectedAmount] = useState(null)
