@@ -86,7 +86,7 @@ const Resources = () => {
       <section className='relative py-20 bg-gradient-to-r from-blue-50 to-indigo-50'>
         <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='max-w-3xl mx-auto text-center'>
-            <DisplayText className='mx-auto'>
+            <DisplayText className='mb-4'>
               Resources
             </DisplayText>
             <Body Text className='max-w-2xl mx-auto'>
