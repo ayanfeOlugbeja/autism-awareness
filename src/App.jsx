@@ -10,12 +10,10 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import { HelmetProvider } from 'react-helmet-async'
 import { auth } from './config/firebase'
 import './index.css'
-// import 'react-toastify/dist/ReactToastify.css';
-// import FrequentlyAQ from './Pages/FAQS/FrequentlyAQ';
 
 // Lazy load components
-const Header = lazy(() => import('./components/Header'))
-const Footer = lazy(() => import('./components/Footer'))
+const Header = lazy(() => import('./components/Header/index'))
+const Footer = lazy(() => import('./components/Footer/index'))
 
 // Lazy load pages
 const Home = lazy(() => import('./Pages/Home'))
