@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { Container } from '../../Components/layout'
-import { Heading, BodyText } from '../../Components/typography'
+import { Heading, BodyText,DisplayText,
+  } from '../../Components/typography'
 import { Button } from '../../Components/interactive'
 import { QuickLink } from '../../Components/interactive'
 
@@ -170,10 +171,10 @@ const Home = () => {
       <section className='bg-blue-50 py-16 md:py-24'>
         <Container>
           <div className='max-w-3xl mx-auto text-center'>
-            <Heading className='text-4xl md:text-5xl mb-6'>
+            <DisplayText className=' mb-4'>
               Supporting Autism Awareness Across Africa
-            </Heading>
-            <BodyText className='text-xl text-gray-600 mb-8'>
+            </DisplayText>
+            <BodyText className='max-w-2xl mb-8'>
               Empowering individuals with autism and their families through
               awareness, support, and research.
             </BodyText>
