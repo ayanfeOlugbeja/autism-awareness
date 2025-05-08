@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 import { db } from '../../../config/firebase'
 import { doc, setDoc, updateDoc, collection } from 'firebase/firestore'
-import AdminForm from '../../../AdminCardomponents/admin/AdminForm'
+import AdminForm from '../../../Components/admin/AdminForm'
 import AdminFormField from '../../../Components/admin/AdminFormField'
 
 const EventForm = ({ event = null, onSuccess }) => {
