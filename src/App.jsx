@@ -12,8 +12,8 @@ import { auth } from './config/firebase'
 import './index.css'
 
 // Lazy load components
-const Header = lazy(() => import('./components/Header/index'))
-const Footer = lazy(() => import('./components/Footer/index'))
+const Header = lazy(() => import('./Components/Header/index.jsx'))
+const Footer = lazy(() => import('./Components/Footer/index.jsx'))
 
 // Lazy load pages
 const Home = lazy(() => import('./Pages/Home'))
@@ -91,8 +91,8 @@ function App() {
               <Routes>
                 {/* Public Routes */}
                 <Route path='/' element={<Home />} />
-                <Route path='/about' element={<About />} />
-                <Route path='/resources' element={<Resources />} />
+                <Route path='/about/*' element={<About />} />
+                <Route path='/resources/*' element={<Resources />} />
                 <Route path='/get-involved' element={<GetInvolved />} />
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/donate' element={<Donate />} />
