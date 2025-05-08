@@ -10,8 +10,6 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import { HelmetProvider } from 'react-helmet-async'
 import { auth } from './config/firebase'
 import './index.css'
-import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
 
 // Lazy load components
 import Header from './Components/Header'
@@ -65,13 +63,6 @@ ProtectedRoute.propTypes = {
 }
 
 function App() {
-  const location = useLocation()
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
-  }, [location.pathname])
   return (
     <HelmetProvider>
       <Router>

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { Container } from '../layout'
 import { Heading, BodyText, SmallText } from '../typography'
 import { Button } from '../interactive'
-
+import { scrollToTop } from '../../utils/scrollToTop'
 const Footer = () => {
   const navigation = {
     about: [
@@ -43,6 +43,7 @@ const Footer = () => {
                     <Link
                       to={item.href}
                       className='text-gray-600 hover:text-blue-600 transition-colors'
+                      onClick={scrollToTop}
                     >
                       {item.name}
                     </Link>
@@ -60,6 +61,7 @@ const Footer = () => {
                     <Link
                       to={item.href}
                       className='text-gray-600 hover:text-blue-600 transition-colors'
+                      onClick={scrollToTop}
                     >
                       {item.name}
                     </Link>
@@ -77,6 +79,7 @@ const Footer = () => {
                     <Link
                       to={item.href}
                       className='text-gray-600 hover:text-blue-600 transition-colors'
+                      onClick={scrollToTop}
                     >
                       {item.name}
                     </Link>
