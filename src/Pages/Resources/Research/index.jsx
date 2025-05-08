@@ -140,7 +140,7 @@ const Research = () => {
         <Container>
           <div className='text-center mb-16'>
             <DisplayText className='mb-4'>Research & Innovation</DisplayText>
-            <BodyText className='max-w-2xl mx-auto'>
+            <BodyText className='max-w-2xl max-auto mb-6'>
               Advancing understanding and improving support for autism in
               African communities through research and innovation.
             </BodyText>
