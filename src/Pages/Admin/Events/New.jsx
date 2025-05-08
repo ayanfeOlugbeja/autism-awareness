@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
-import AdminCard from '../../../components/admin/AdminCard'
-import AdminButton from '../../../components/admin/AdminButton'
+import AdminCard from '../../../Components/admin/AdminCard'
+import AdminButton from '../../../Components/admin/AdminButton'
 import EventForm from './EventForm'
 
 const NewEvent = () => {

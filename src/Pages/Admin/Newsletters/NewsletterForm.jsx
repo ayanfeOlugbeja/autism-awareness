@@ -2,8 +2,8 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 import { db } from '../../../config/firebase'
 import { doc, setDoc, updateDoc, collection } from 'firebase/firestore'
-import AdminForm from '../../../components/admin/AdminForm'
-import AdminFormField from '../../../components/admin/AdminFormField'
+import AdminForm from '../../../Components/admin/AdminForm'
+import AdminFormField from '../../../Components/admin/AdminFormField'
 
 const NewsletterForm = ({ newsletter = null, onSuccess }) => {
   const [loading, setLoading] = useState(false)
