@@ -174,7 +174,7 @@ const Home = () => {
             <DisplayText className=' mb-4'>
               Supporting Autism Awareness Across Africa
             </DisplayText>
-            <BodyText className='max-w-2xl mx-auto'>
+            <BodyText className='max-w-2xl max-auto mb-6'>
               Empowering individuals with autism and their families through
               awareness, support, and research.
             </BodyText>
