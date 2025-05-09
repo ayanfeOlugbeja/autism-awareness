@@ -3,7 +3,6 @@ import { Container } from '../../Components/layout'
 import { Heading, BodyText, DisplayText } from '../../Components/typography'
 import { Button } from '../../Components/interactive'
 import { QuickLink } from '../../Components/interactive'
-import { scrollToTop } from '../../utils/scrollToTop'
 
 const Home = () => {
   const navigate = useNavigate()
