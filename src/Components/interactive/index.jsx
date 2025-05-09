@@ -86,18 +86,28 @@ NavigationCard.propTypes = {
   description: PropTypes.string.isRequired,
 }
 
-export const QuickLink = ({ to, label }) => (
+export const QuickLink = ({ to, label, title, icon, description }) => (
   <Link
     to={to}
     className='inline-block px-4 py-2 text-blue-600 hover:text-blue-800 font-normal transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 hover:after:w-full after:transition-all after:duration-300'
   >
     {label}
+    <div className='text-blue-600 mb-4 transform transition-transform duration-300 group-hover:scale-110'>
+      {icon}
+    </div>
+    <h3 className='text-lg font-normal text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300'>
+      {title}
+    </h3>
+    <p className='text-sm text-gray-500'>{description}</p>
   </Link>
 )
 
 QuickLink.propTypes = {
   to: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  icon: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 }
 
 export const Input = ({ label, error, className = '', ...props }) => (

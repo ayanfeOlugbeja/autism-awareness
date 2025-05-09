@@ -3,6 +3,7 @@ import Mission from './Mission'
 import Team from './Team'
 import Impact from './Impact'
 import Careers from './Careers'
+import { BodyText, DisplayText } from '../../Components/typography'
 
 const About = () => {
   const subPages = [
@@ -18,13 +19,11 @@ const About = () => {
       <section className='relative py-20 bg-gradient-to-r from-blue-50 to-indigo-50'>
         <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='max-w-3xl mx-auto text-center'>
-            <h1 className='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
-              About Autism Awareness Africa
-            </h1>
-            <p className='text-xl text-gray-600'>
+            <DisplayText className='mb-4'>About</DisplayText>
+            <BodyText className='max-w-2xl mx-auto'>
               We are dedicated to creating a more inclusive and supportive
               environment for individuals with autism across Africa.
-            </p>
+            </BodyText>
           </div>
         </div>
       </section>

@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom'
 import { Container } from '../../Components/layout'
-import { Heading, BodyText,DisplayText,
-  } from '../../Components/typography'
+import { Heading, BodyText, DisplayText } from '../../Components/typography'
 import { Button } from '../../Components/interactive'
 import { QuickLink } from '../../Components/interactive'
+import { scrollToTop } from '../../utils/scrollToTop'
 
 const Home = () => {
   const navigate = useNavigate()
@@ -106,7 +106,7 @@ const Home = () => {
       title: 'What is Autism?',
       description:
         'Learn about autism spectrum disorder and its characteristics',
-      href: '/resources/what-is-autism',
+      to: '/resources/what-is-autism',
       icon: (
         <svg
           className='h-6 w-6'
@@ -126,7 +126,7 @@ const Home = () => {
     {
       title: 'Support Services',
       description: 'Access our range of support services and resources',
-      href: '/resources/support-services',
+      to: '/resources/support-services',
       icon: (
         <svg
           className='h-6 w-6'
@@ -146,7 +146,7 @@ const Home = () => {
     {
       title: 'Get Involved',
       description: 'Find ways to support our mission and make a difference',
-      href: '/get-involved',
+      to: '/get-involved',
       icon: (
         <svg
           className='h-6 w-6'
@@ -171,10 +171,10 @@ const Home = () => {
       <section className='bg-blue-50 py-16 md:py-24'>
         <Container>
           <div className='max-w-3xl mx-auto text-center'>
-            <DisplayText className=' mb-4'>
+            <DisplayText className=' mb-4 font-normal'>
               Supporting Autism Awareness Across Africa
             </DisplayText>
-            <BodyText className='max-w-2xl mx-auto mb-6'>
+            <BodyText className='max-w-2xl mx-auto mb-8'>
               Empowering individuals with autism and their families through
               awareness, support, and research.
             </BodyText>
@@ -310,7 +310,10 @@ const Home = () => {
               Access our most popular resources and information.
             </BodyText>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          <div
+            className='grid grid-cols-1 md:grid-cols-3 gap-8'
+            onClick={scrollToTop}
+          >
             {quickLinks.map((link) => (
               <QuickLink key={link.title} {...link} />
             ))}
