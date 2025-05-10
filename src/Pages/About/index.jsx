@@ -42,7 +42,7 @@ const About = () => {
                         to={page.path}
                         className='block px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors'
                       >
-                        {page.name}
+                        <BodyText className='font-normal'>{page.name}</BodyText>
                       </Link>
                     </li>
                   ))}

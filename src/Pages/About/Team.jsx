@@ -1,28 +1,28 @@
 const Team = () => {
   const teamMembers = [
     {
-      name: 'Dr. Sarah Johnson',
+      name: 'Aiyedogbon Abraham',
       role: 'Executive Director',
       bio: 'With over 15 years of experience in autism advocacy and healthcare management, Dr. Johnson leads our organization with passion and expertise.',
       image:
         'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
     {
-      name: 'Michael Osei',
+      name: 'Posi Adekunle',
       role: 'Program Director',
       bio: 'Michael brings extensive experience in community development and has been instrumental in expanding our programs across West Africa.',
       image:
         'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
     {
-      name: 'Dr. Aisha Mbeki',
+      name: 'John Doe',
       role: 'Research Director',
       bio: 'Dr. Mbeki leads our research initiatives, focusing on understanding the unique needs of the autism community in African contexts.',
       image:
         'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
     {
-      name: 'Kwame Mensah',
+      name: 'John Doe',
       role: 'Community Outreach Coordinator',
       bio: 'Kwame works closely with local communities to develop and implement support programs for families affected by autism.',
       image:

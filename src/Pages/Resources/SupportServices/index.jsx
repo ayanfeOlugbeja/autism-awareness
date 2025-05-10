@@ -2,7 +2,7 @@ import {
   DisplayText,
   Heading,
   BodyText,
-  SmallText,
+  // SmallText,
 } from '../../../Components/typography'
 import { Container, Grid, Card, Section } from '../../../Components/layout'
 import { Button, NavigationCard } from '../../../Components/interactive'
@@ -233,14 +233,14 @@ const SupportServices = () => {
                 <Card key={program.title} className='p-8'>
                   <Heading className='text-xl mb-4'>{program.title}</Heading>
                   <BodyText className='mb-6'>{program.description}</BodyText>
-                  <div className='space-y-2'>
+                  {/* <div className='space-y-2'>
                     {program.features.map((feature, index) => (
                       <SmallText key={index} className='flex items-center'>
                         <span className='mr-2'>•</span>
                         {feature}
                       </SmallText>
                     ))}
-                  </div>
+                  </div> */}
                   <Button variant='outline' className='mt-6'>
                     Learn More
                   </Button>

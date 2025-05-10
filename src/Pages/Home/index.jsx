@@ -19,23 +19,23 @@ const Home = () => {
     scrollToTop()
   }
 
-  const impactStats = [
-    {
-      number: '1M+',
-      label: 'People Reached',
-      description: 'Through awareness campaigns and educational programs',
-    },
-    {
-      number: '50+',
-      label: 'Communities',
-      description: 'Served across multiple African countries',
-    },
-    {
-      number: '10K+',
-      label: 'Families Supported',
-      description: 'With resources, training, and direct assistance',
-    },
-  ]
+  // const impactStats = [
+  //   {
+  //     number: '1M+',
+  //     label: 'People Reached',
+  //     description: 'Through awareness campaigns and educational programs',
+  //   },
+  //   {
+  //     number: '50+',
+  //     label: 'Communities',
+  //     description: 'Served across multiple African countries',
+  //   },
+  //   {
+  //     number: '10K+',
+  //     label: 'Families Supported',
+  //     description: 'With resources, training, and direct assistance',
+  //   },
+  // ]
 
   const featuredPrograms = [
     {
@@ -163,59 +163,52 @@ const Home = () => {
       ),
     },
   ]
-
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen bg-white text-gray-900 font-sans'>
       {/* Hero Section */}
-      <section className='bg-blue-50 py-16 md:py-24'>
-        <Container>
-          <div className='max-w-3xl mx-auto text-center'>
-            <DisplayText className=' mb-4 font-normal'>
-              Supporting Autism Awareness Across Africa
-            </DisplayText>
-            <BodyText className='max-w-2xl mx-auto mb-8'>
-              Empowering individuals with autism and their families through
-              awareness, support, and research.
-            </BodyText>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Button
-                variant='primary'
-                size='lg'
-                onClick={() => handleNavigation('/get-involved')}
-              >
-                Get Involved
-              </Button>
-              <Button
-                variant='outline'
-                size='lg'
-                onClick={() => handleNavigation('/about')}
-              >
-                Learn More
-              </Button>
-            </div>
+      <section className='bg-white border-b border-gray-200'>
+        <Container className='py-24 text-left md:text-center max-w-5xl mx-auto'>
+          <DisplayText className='text-5xl md:text-6xl font-extrabold leading-tight text-black'>
+            Empowering Autism Awareness in Africa
+          </DisplayText>
+          <BodyText className='mt-6 text-lg text-gray-600 max-w-xl mx-auto md:mt-8'>
+            Driving inclusion and empowerment through support, education, and
+            advocacy for individuals with autism.
+          </BodyText>
+          <div className='mt-10 flex flex-col sm:flex-row gap-4 justify-center'>
+            <Button
+              variant='primary'
+              size='lg'
+              onClick={() => handleNavigation('/get-involved')}
+            >
+              Get Involved
+            </Button>
+            <Button
+              variant='outline'
+              size='lg'
+              onClick={() => handleNavigation('/about')}
+            >
+              Learn More
+            </Button>
           </div>
         </Container>
       </section>
 
-      {/* Impact Stats */}
-      <section className='py-16 bg-white'>
-        <Container>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            {impactStats.map((stat) => (
-              <div
-                key={stat.label}
-                className='text-center p-6 bg-gray-50 rounded-lg'
-              >
-                <Heading className='text-3xl md:text-4xl text-blue-600 mb-2'>
-                  {stat.number}
-                </Heading>
-                <Heading className='text-lg mb-2'>{stat.label}</Heading>
-                <BodyText className='text-gray-600'>
-                  {stat.description}
-                </BodyText>
-              </div>
-            ))}
-          </div>
+      {/* Stats Section */}
+      <section className='py-16 border-b border-gray-100'>
+        <Container className='grid grid-cols-1 md:grid-cols-3 gap-12 text-center'>
+          {[
+            ['1M+', 'People Reached'],
+            ['50+', 'Communities Served'],
+            ['10K+', 'Families Supported'],
+          ].map(([value, label]) => (
+            <div key={label}>
+              <Heading className='text-5xl font-bold text-blue-600 mb-2'>
+                {value}
+              </Heading>
+              <BodyText className='text-gray-700'>{label}</BodyText>
+            </div>
+          ))}
         </Container>
       </section>
 
@@ -231,16 +224,13 @@ const Home = () => {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {featuredPrograms.map((program) => (
-              <div
-                key={program.title}
-                className='bg-white p-6 rounded-lg shadow-sm'
-              >
+              <div key={program.title} className=' p-6 rounded-lg shadow-sm'>
                 <div className='text-blue-600 mb-4'>{program.icon}</div>
                 <Heading className='text-xl mb-3'>{program.title}</Heading>
                 <BodyText className='text-gray-600 mb-4'>
                   {program.description}
                 </BodyText>
-                <Button variant='text' className='text-blue-600'>
+                <Button variant='outline' className='text-blue-600'>
                   Learn More
                 </Button>
               </div>
@@ -248,60 +238,8 @@ const Home = () => {
           </div>
         </Container>
       </section>
-
-      {/* Call to Action */}
-      <section className='py-20 bg-blue-50 text-white'>
-        <Container>
-          <div className='max-w-4xl mx-auto text-center'>
-            <Heading className='text-4xl md:text-5xl mb-6 text-gray-900'>
-              Make a Difference Today
-            </Heading>
-            <BodyText className='text-xl mb-12 text-gray-600 max-w-2xl mx-auto'>
-              Join us in our mission to support individuals with autism and
-              their families across Africa. Your contribution can create lasting
-              change.
-            </BodyText>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto'>
-              <div className='bg-white p-6 rounded-lg shadow-sm'>
-                <Heading className='text-2xl mb-4 text-gray-900'>
-                  Donate
-                </Heading>
-                <BodyText className='text-gray-600 mb-6'>
-                  Your financial support helps us provide essential services and
-                  resources to families in need.
-                </BodyText>
-                <Button
-                  variant='primary'
-                  size='lg'
-                  className='w-full'
-                  onClick={() => handleNavigation('/donate')}
-                >
-                  Donate Now
-                </Button>
-              </div>
-              <div className='bg-white p-6 rounded-lg shadow-sm'>
-                <Heading className='text-2xl mb-4 text-gray-900'>
-                  Volunteer
-                </Heading>
-                <BodyText className='text-gray-600 mb-6'>
-                  Share your time and skills to make a direct impact in our
-                  community.
-                </BodyText>
-                <Button
-                  variant='outline'
-                  size='lg'
-                  className='w-full'
-                  onClick={() => handleNavigation('/get-involved')}
-                >
-                  Get Involved
-                </Button>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
       {/* Quick Links */}
-      <section className='py-16 bg-white'>
+      <section className='py-16 bg-gray-50'>
         <Container>
           <div className='text-center mb-12'>
             <Heading className='text-3xl mb-4'>Quick Links</Heading>
@@ -316,6 +254,34 @@ const Home = () => {
             {quickLinks.map((link) => (
               <QuickLink key={link.title} {...link} />
             ))}
+          </div>
+        </Container>
+      </section>
+      {/* Final CTA */}
+      <section className='bg-black text-white py-24'>
+        <Container className='text-center max-w-3xl mx-auto'>
+          <Heading className='text-4xl md:text-5xl font-bold mb-6 text-blue-50'>
+            Make a Difference Today
+          </Heading>
+          <BodyText className='text-lg mb-8 text-gray-200'>
+            Join our mission to create inclusive environments for people with
+            autism. Every effort counts.
+          </BodyText>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Button
+              variant='primary'
+              size='lg'
+              onClick={() => handleNavigation('/donate')}
+            >
+              Donate Now
+            </Button>
+            <Button
+              variant='outline'
+              size='lg'
+              onClick={() => handleNavigation('/get-involved')}
+            >
+              Get Involved
+            </Button>
           </div>
         </Container>
       </section>

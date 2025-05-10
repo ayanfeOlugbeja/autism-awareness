@@ -45,7 +45,7 @@ const Footer = () => {
                       className='text-gray-600 hover:text-blue-600 transition-colors'
                       onClick={scrollToTop}
                     >
-                      {item.name}
+                      <BodyText className='font-normal'>{item.name}</BodyText>
                     </Link>
                   </li>
                 ))}
@@ -63,7 +63,7 @@ const Footer = () => {
                       className='text-gray-600 hover:text-blue-600 transition-colors'
                       onClick={scrollToTop}
                     >
-                      {item.name}
+                      <BodyText className='font-normal'>{item.name}</BodyText>
                     </Link>
                   </li>
                 ))}
@@ -81,7 +81,7 @@ const Footer = () => {
                       className='text-gray-600 hover:text-blue-600 transition-colors'
                       onClick={scrollToTop}
                     >
-                      {item.name}
+                      <BodyText className='font-normal'>{item.name}</BodyText>
                     </Link>
                   </li>
                 ))}
@@ -133,12 +133,12 @@ const Footer = () => {
               </div>
               <ul className='flex space-x-6'>
                 {navigation.legal.map((item) => (
-                  <li key={item.name}>
+                  <li key={item.name} onClick={scrollToTop}>
                     <Link
                       to={item.href}
                       className='text-gray-500 hover:text-blue-600 transition-colors'
                     >
-                      {item.name}
+                      <BodyText className='font-medium'>{item.name}</BodyText>
                     </Link>
                   </li>
                 ))}

@@ -1,7 +1,10 @@
+import { Heading } from '../../Components/typography'
 const Mission = () => {
   return (
     <div className='prose prose-lg max-w-none'>
-      <h2 className='text-3xl font-bold text-gray-900 mb-8'>Our Mission</h2>
+      <Heading className='text-3xl font-xbold text-gray-900 mb-8'>
+        Our Mission
+      </Heading>
 
       <div className='space-y-8'>
         <div>

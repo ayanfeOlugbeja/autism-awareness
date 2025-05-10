@@ -106,7 +106,7 @@ const News = () => {
                   <BodyText className='text-gray-600 mb-4'>
                     {news.description}
                   </BodyText>
-                  <Button variant='text' className='text-blue-600'>
+                  <Button variant='outline' className='text-blue-600'>
                     Read More
                   </Button>
                 </div>
@@ -134,7 +134,7 @@ const News = () => {
                 <BodyText className='text-gray-600 mb-4'>
                   {news.description}
                 </BodyText>
-                <Button variant='text' className='text-blue-600'>
+                <Button variant='outline' className='text-blue-600'>
                   Read More
                 </Button>
               </Card>

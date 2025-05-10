@@ -131,7 +131,7 @@ const Events = () => {
                 <BodyText className='text-gray-600 mb-4'>
                   {event.description}
                 </BodyText>
-                <Button variant='text' className='text-blue-600'>
+                <Button variant='outline' className='text-blue-600'>
                   View Photos
                 </Button>
               </Card>

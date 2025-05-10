@@ -1,5 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom'
-import { BodyText, DisplayText } from '../../Components/typography'
+import { BodyText, DisplayText, Heading } from '../../Components/typography'
 import WhatIsAutism from './WhatIsAutism'
 import SupportServices from './SupportServices'
 import Research from './Research'
@@ -107,10 +107,12 @@ const Resources = () => {
                 <div className='flex items-start space-x-4'>
                   <div className='flex-shrink-0 text-blue-600'>{link.icon}</div>
                   <div>
-                    <h3 className='text-lg font-semibold text-gray-900 mb-2'>
+                    <Heading className='font-normal text-gray-900 mb-2'>
                       {link.title}
-                    </h3>
-                    <p className='text-gray-600'>{link.description}</p>
+                    </Heading>
+                    <BodyText className='text-gray-600 font-normal'>
+                      {link.description}
+                    </BodyText>
                   </div>
                 </div>
               </Link>
@@ -133,7 +135,7 @@ const Resources = () => {
                         to={page.path}
                         className='block px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors'
                       >
-                        {page.name}
+                        <BodyText className='font-normal'>{page.name}</BodyText>
                       </Link>
                     </li>
                   ))}

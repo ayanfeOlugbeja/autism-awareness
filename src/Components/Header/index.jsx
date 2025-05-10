@@ -13,95 +13,108 @@ const Header = () => {
     { name: 'About', href: '/about' },
     { name: 'Resources', href: '/resources' },
     { name: 'Get Involved', href: '/get-involved' },
-    { name: 'Donate', href: '/donate' },
+    // { name: 'Donate', href: '/donate' },
     { name: 'Contact', href: '/contact' },
   ]
 
   const isActive = (path) => location.pathname === path
 
   return (
-    <header className='bg-white border-b border-gray-100'>
+    <header className='bg-white border-b border-gray-200 shadow-sm'>
       <Container>
-        <div className='flex items-center justify-between h-16'>
+        <div className='flex justify-between items-center h-20'>
           {/* Logo */}
           <Link to='/' className='flex items-center'>
-            <Heading className='text-xl'>AAA</Heading>
+            <Heading className='text-2xl font-black tracking-tight text-black'>
+              AAA
+            </Heading>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className='hidden md:flex items-center space-x-8'>
-            {navigation.map((item) => (
+          <nav className='hidden md:flex items-center gap-8'>
+            {navigation.slice(0, -1).map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   isActive(item.href)
                     ? 'text-blue-600'
-                    : 'text-gray-600 hover:text-blue-600'
+                    : 'text-gray-700 hover:text-blue-600'
                 }`}
               >
                 {item.name}
               </Link>
             ))}
-            <Button variant='primary'>Donate</Button>
+            <Link to='/donate'>
+              <Button variant='primary' size='sm' className='px-4 py-2 h-auto'>
+                Donate
+              </Button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className='md:hidden p-2 text-gray-600 hover:text-blue-600 focus:outline-none'
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label='Toggle menu'
+            className='md:hidden text-gray-700 hover:text-blue-600 focus:outline-none p-2'
           >
-            <svg
-              className='h-6 w-6'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-            >
-              {isMenuOpen ? (
+            {isMenuOpen ? (
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                className='w-6 h-6'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
                 <path
                   strokeLinecap='round'
                   strokeLinejoin='round'
-                  strokeWidth='1.5'
+                  strokeWidth={2}
                   d='M6 18L18 6M6 6l12 12'
                 />
-              ) : (
+              </svg>
+            ) : (
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                className='w-6 h-6'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
                 <path
                   strokeLinecap='round'
                   strokeLinejoin='round'
-                  strokeWidth='1.5'
+                  strokeWidth={2}
                   d='M4 6h16M4 12h16M4 18h16'
                 />
-              )}
-            </svg>
+              </svg>
+            )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className='md:hidden border-t border-gray-100'>
-            <nav className='py-4'>
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`block px-4 py-2 text-sm font-medium ${
-                    isActive(item.href)
-                      ? 'text-blue-600'
-                      : 'text-gray-600 hover:text-blue-600'
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <div className='px-4 pt-4'>
-                <Button variant='primary' className='w-full'>
-                  Donate
-                </Button>
-              </div>
-            </nav>
-          </div>
+          <nav className='md:hidden border-t border-gray-200 mt-2 pt-4 space-y-2'>
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                onClick={() => setIsMenuOpen(false)}
+                className={`block px-4 py-2 text-sm font-medium ${
+                  isActive(item.href)
+                    ? 'text-blue-600'
+                    : 'text-gray-700 hover:text-blue-600'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <div className='px-4 pt-4'>
+              <Button variant='primary' className='w-full px-4 py-2'>
+                Donate
+              </Button>
+            </div>
+          </nav>
         )}
       </Container>
     </header>
