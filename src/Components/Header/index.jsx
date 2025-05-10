@@ -25,7 +25,10 @@ const Header = () => {
         <div className='flex justify-between items-center h-20'>
           {/* Logo */}
           <Link to='/' className='flex items-center'>
-            <Heading className='text-2xl font-extrabold tracking-tight'>
+            <Heading
+              className='text-2xl font-black text-black tracking-tight'
+              style={{ fontWeight: '900', letterSpacing: '-0.05em' }}
+            >
               AAA
             </Heading>
           </Link>
