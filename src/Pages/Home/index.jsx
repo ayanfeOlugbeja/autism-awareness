@@ -264,12 +264,12 @@ const Home = () => {
         </Container>
       </section>
       {/* Final CTA */}
-      <section className='bg-black text-white py-24'>
+      <section className='bg-orange-50 text-white py-24'>
         <Container className='text-center max-w-3xl mx-auto'>
-          <Heading className='text-4xl md:text-5xl font-bold mb-6 text-white'>
+          <Heading className='text-4xl md:text-5xl font-semibold mb-6 text-black'>
             Make a Difference Today
           </Heading>
-          <BodyText className='text-lg mb-8 text-white'>
+          <BodyText className='text-lg mb-8 text-black'>
             Join our mission to create inclusive environments for people with
             autism. Every effort counts.
           </BodyText>

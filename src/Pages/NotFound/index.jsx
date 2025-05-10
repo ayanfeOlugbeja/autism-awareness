@@ -1,6 +1,8 @@
 import { DisplayText, Heading, BodyText } from '../../Components/typography'
 import { Container, Grid, Section } from '../../Components/layout'
 import { NavigationCard, QuickLink, Button } from '../../Components/interactive'
+import { Link } from 'react-router-dom'
+import { scrollToTop } from '../../utils/scrollToTop'
 
 const NotFound = () => {
   const navigationCards = [
@@ -84,8 +86,16 @@ const NotFound = () => {
               changed, or is temporarily unavailable.
             </BodyText>
             <div className='flex justify-center space-x-4'>
-              <Button variant='primary'>Go Home</Button>
-              <Button variant='outline'>Contact Support</Button>
+              <Link to='/'>
+                {' '}
+                <Button variant='primary' onClick={scrollToTop}>
+                  Go Home
+                </Button>{' '}
+              </Link>
+              <Link to='/contact' onClick={scrollToTop}>
+                {' '}
+                <Button variant='outline'>Contact Support</Button>
+              </Link>
             </div>
           </div>
         </Container>

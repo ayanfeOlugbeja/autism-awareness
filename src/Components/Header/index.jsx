@@ -115,9 +115,11 @@ const Header = () => {
               </Link>
             ))}
             <div className='px-4 pt-4'>
-              <Button variant='primary' className='w-full px-4 py-2'>
-                Donate
-              </Button>
+              <Link to='/donate'>
+                <Button variant='primary' className='w-full px-4 py-2'>
+                  Donate
+                </Button>
+              </Link>
             </div>
           </nav>
         )}
