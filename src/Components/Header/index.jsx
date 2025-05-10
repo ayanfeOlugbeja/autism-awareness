@@ -26,8 +26,8 @@ const Header = () => {
           {/* Logo */}
           <Link to='/' className='flex items-center'>
             <Heading
-              className='text-2xl font-black text-black tracking-tight'
-              style={{ fontWeight: '900', letterSpacing: '-0.05em' }}
+              className='text-2xl font-extrabold text-black tracking-tight'
+              style={{ fontWeight: '800', letterSpacing: '-0.05em' }}
             >
               AAA
             </Heading>

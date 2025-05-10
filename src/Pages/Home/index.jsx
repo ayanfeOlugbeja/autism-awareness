@@ -169,8 +169,8 @@ const Home = () => {
       <section className='bg-white border-b border-gray-200'>
         <Container className='py-24 text-left md:text-center max-w-5xl mx-auto'>
           <DisplayText
-            className='text-4xl md:text-5xl font-black text-black leading-tight tracking-tighter'
-            style={{ fontWeight: '900', letterSpacing: '-0.05em' }}
+            className='text-4xl md:text-5xl font-extrabold text-black leading-tight tracking-tighter'
+            style={{ fontWeight: '800', letterSpacing: '-0.05em' }}
           >
             Inspiring Autism Awareness in Africa
           </DisplayText>
