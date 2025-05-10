@@ -168,7 +168,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className='bg-white border-b border-gray-200'>
         <Container className='py-24 text-left md:text-center max-w-5xl mx-auto'>
-          <DisplayText className='text-5xl md:text-6xl font-extrabold leading-tight text-black'>
+          <DisplayText className='text-5xl md:text-6xl font-black leading-tight text-black'>
             Empowering Autism Awareness in Africa
           </DisplayText>
           <BodyText className='mt-6 text-lg text-gray-600 max-w-xl mx-auto md:mt-8'>
@@ -260,7 +260,7 @@ const Home = () => {
       {/* Final CTA */}
       <section className='bg-black text-white py-24'>
         <Container className='text-center max-w-3xl mx-auto'>
-          <Heading className='text-4xl md:text-5xl font-bold mb-6 text-blue-50'>
+          <Heading className='text-4xl md:text-5xl font-bold mb-6 text-white'>
             Make a Difference Today
           </Heading>
           <BodyText className='text-lg mb-8 text-gray-200'>
