@@ -25,7 +25,7 @@ const Header = () => {
         <div className='flex justify-between items-center h-20'>
           {/* Logo */}
           <Link to='/' className='flex items-center'>
-            <Heading className='text-2xl font-black tracking-tight text-black'>
+            <Heading className='text-2xl font-extrabold tracking-tight'>
               AAA
             </Heading>
           </Link>

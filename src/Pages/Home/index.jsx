@@ -168,8 +168,8 @@ const Home = () => {
       {/* Hero Section */}
       <section className='bg-white border-b border-gray-200'>
         <Container className='py-24 text-left md:text-center max-w-5xl mx-auto'>
-          <DisplayText className='text-5xl md:text-6xl font-black leading-tight text-black'>
-            Empowering Autism Awareness in Africa
+          <DisplayText className='text-4xl md:text-5xl font-extrabold leading-tight tracking-tighter'>
+            Inspiring Autism Awareness in Africa
           </DisplayText>
           <BodyText className='mt-6 text-lg text-gray-600 max-w-xl mx-auto md:mt-8'>
             Driving inclusion and empowerment through support, education, and
@@ -263,7 +263,7 @@ const Home = () => {
           <Heading className='text-4xl md:text-5xl font-bold mb-6 text-white'>
             Make a Difference Today
           </Heading>
-          <BodyText className='text-lg mb-8 text-gray-200'>
+          <BodyText className='text-lg mb-8 text-white'>
             Join our mission to create inclusive environments for people with
             autism. Every effort counts.
           </BodyText>
