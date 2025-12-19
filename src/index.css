@@ -3,6 +3,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes draw {
+  0% {
+    stroke-dasharray: 0 2000;
+    stroke-dashoffset: 2000;
+  }
+  100% {
+    stroke-dasharray: 2000 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw {
+  animation: draw 4s ease-in-out forwards;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+}
+
 /* Normalize CSS for modern browsers */
 html,
 body,

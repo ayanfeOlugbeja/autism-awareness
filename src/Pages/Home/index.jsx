@@ -219,7 +219,7 @@ const Home = () => {
       </section>
 
       {/* Featured Programs */}
-      <section className='py-16 bg-gray-50'>
+      <section className='py-16 '>
         <Container>
           <div className='text-center mb-12'>
             <Heading className='text-3xl mb-4'>Our Programs</Heading>
@@ -245,7 +245,7 @@ const Home = () => {
         </Container>
       </section>
       {/* Quick Links */}
-      <section className='py-16 bg-gray-50'>
+      <section className='py-16 '>
         <Container>
           <div className='text-center mb-12'>
             <Heading className='text-3xl mb-4'>Quick Links</Heading>

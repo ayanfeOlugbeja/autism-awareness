@@ -3,6 +3,10 @@ import { Container } from '../layout'
 import { Heading, BodyText, SmallText } from '../typography'
 import { Button } from '../interactive'
 import { scrollToTop } from '../../utils/scrollToTop'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
+
 const Footer = () => {
   const navigation = {
     about: [
@@ -27,6 +31,10 @@ const Footer = () => {
       { name: 'Accessibility', href: '/accessibility' },
     ],
   }
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 })
+  }, [])
 
   return (
     <footer className='bg-gray-50 border-t border-gray-100'>
